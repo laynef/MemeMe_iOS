@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D944B9A61D0639BA00F3C871 /* MemeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944B9A51D0639BA00F3C871 /* MemeTableViewController.swift */; };
+		D944B9A81D0639DA00F3C871 /* MemeCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944B9A71D0639DA00F3C871 /* MemeCollectionViewController.swift */; };
+		D944B9AA1D0639F400F3C871 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944B9A91D0639F400F3C871 /* CollectionViewCell.swift */; };
+		D944B9AC1D063A1000F3C871 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944B9AB1D063A1000F3C871 /* TableViewCell.swift */; };
+		D944B9B01D063D5500F3C871 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D944B9AF1D063D5500F3C871 /* DetailViewController.swift */; };
 		D96269361D05E74800C92D25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96269351D05E74800C92D25 /* AppDelegate.swift */; };
 		D96269381D05E74800C92D25 /* EditorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D96269371D05E74800C92D25 /* EditorViewController.swift */; };
 		D962693B1D05E74800C92D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D96269391D05E74800C92D25 /* Main.storyboard */; };
@@ -36,6 +41,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D944B9A51D0639BA00F3C871 /* MemeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeTableViewController.swift; sourceTree = "<group>"; };
+		D944B9A71D0639DA00F3C871 /* MemeCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeCollectionViewController.swift; sourceTree = "<group>"; };
+		D944B9A91D0639F400F3C871 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		D944B9AB1D063A1000F3C871 /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		D944B9AF1D063D5500F3C871 /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		D96269321D05E74800C92D25 /* Meme Me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme Me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D96269351D05E74800C92D25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D96269371D05E74800C92D25 /* EditorViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +88,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D944B9AD1D063A1A00F3C871 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D944B9AB1D063A1000F3C871 /* TableViewCell.swift */,
+				D944B9A91D0639F400F3C871 /* CollectionViewCell.swift */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		D944B9AE1D063A2B00F3C871 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D96269371D05E74800C92D25 /* EditorViewController.swift */,
+				D944B9AF1D063D5500F3C871 /* DetailViewController.swift */,
+				D944B9A71D0639DA00F3C871 /* MemeCollectionViewController.swift */,
+				D944B9A51D0639BA00F3C871 /* MemeTableViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		D96269291D05E74800C92D25 = {
 			isa = PBXGroup;
 			children = (
@@ -102,8 +132,9 @@
 			isa = PBXGroup;
 			children = (
 				D96269351D05E74800C92D25 /* AppDelegate.swift */,
-				D96269371D05E74800C92D25 /* EditorViewController.swift */,
 				D96269661D05EBBC00C92D25 /* Utilities.swift */,
+				D944B9AE1D063A2B00F3C871 /* Controllers */,
+				D944B9AD1D063A1A00F3C871 /* Cells */,
 				D96269391D05E74800C92D25 /* Main.storyboard */,
 				D962693F1D05E74800C92D25 /* Assets.xcassets */,
 				D96269411D05E74800C92D25 /* LaunchScreen.storyboard */,
@@ -199,6 +230,7 @@
 				TargetAttributes = {
 					D96269311D05E74800C92D25 = {
 						CreatedOnToolsVersion = 7.3.1;
+						DevelopmentTeam = 5D8SB9D52G;
 					};
 					D96269481D05E74900C92D25 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -262,9 +294,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D944B9B01D063D5500F3C871 /* DetailViewController.swift in Sources */,
 				D96269381D05E74800C92D25 /* EditorViewController.swift in Sources */,
+				D944B9AC1D063A1000F3C871 /* TableViewCell.swift in Sources */,
 				D962693E1D05E74800C92D25 /* Meme_Me.xcdatamodeld in Sources */,
 				D96269671D05EBBC00C92D25 /* Utilities.swift in Sources */,
+				D944B9AA1D0639F400F3C871 /* CollectionViewCell.swift in Sources */,
+				D944B9A61D0639BA00F3C871 /* MemeTableViewController.swift in Sources */,
+				D944B9A81D0639DA00F3C871 /* MemeCollectionViewController.swift in Sources */,
 				D96269361D05E74800C92D25 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,10 +444,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Meme Me/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LayneFaler.Meme-Me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -419,10 +459,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = "Meme Me/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "LayneFaler.Meme-Me";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
