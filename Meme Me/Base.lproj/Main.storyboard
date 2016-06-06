@@ -3,6 +3,8 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Editor View Controller-->
@@ -37,8 +39,9 @@
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WBe-bh-jAj">
                                 <rect key="frame" x="0.0" y="121" width="600" height="360"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" placeholder="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EvA-sH-7Ld">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EvA-sH-7Ld">
                                 <rect key="frame" x="42" y="489" width="516" height="47"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -60,14 +63,14 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="Kp9-Pw-bxP"/>
                                 </items>
                             </toolbar>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" placeholder="TOP" textAlignment="center" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="akj-bK-SNn">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="fill" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="35" translatesAutoresizingMaskIntoConstraints="NO" id="akj-bK-SNn">
                                 <rect key="frame" x="42" y="66" width="516" height="47"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="40"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters" autocorrectionType="no" spellCheckingType="no"/>
                             </textField>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="kYX-u9-1GO" secondAttribute="trailing" id="2ww-fh-Swh"/>
                             <constraint firstItem="WBe-bh-jAj" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="5Gw-l8-cUb"/>
@@ -142,12 +145,20 @@
                                     <rect key="frame" x="0.0" y="0.0" width="132" height="127"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Spe-cj-YUo">
-                                            <rect key="frame" x="0.0" y="0.0" width="132" height="127"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Spe-cj-YUo">
+                                            <rect key="frame" x="9" y="9" width="114" height="110"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="Spe-cj-YUo" secondAttribute="height" multiplier="132:127" id="jaW-KK-Z9N"/>
+                                            </constraints>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
+                                <constraints>
+                                    <constraint firstItem="Spe-cj-YUo" firstAttribute="top" secondItem="3W9-SG-Ytp" secondAttribute="topMargin" constant="1" id="LhN-Xk-FD2"/>
+                                    <constraint firstAttribute="trailingMargin" secondItem="Spe-cj-YUo" secondAttribute="trailing" constant="1" id="fxw-z6-Rsc"/>
+                                    <constraint firstItem="Spe-cj-YUo" firstAttribute="leading" secondItem="3W9-SG-Ytp" secondAttribute="leadingMargin" constant="1" id="jYR-HT-AQo"/>
+                                </constraints>
                                 <connections>
                                     <outlet property="selectedImageView" destination="Spe-cj-YUo" id="Ap3-B9-6gq"/>
                                     <segue destination="bhO-Qg-LjJ" kind="show" id="4Ha-yX-psj"/>
@@ -201,7 +212,7 @@
                     <navigationItem key="navigationItem" id="FwH-bA-chM">
                         <barButtonItem key="rightBarButtonItem" systemItem="edit" id="2fN-53-yR4">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="K6U-Bn-kIT"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" identifier="showMemeEditor" id="K6U-Bn-kIT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -312,7 +323,7 @@
         <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="fr8-o8-te9"/>
-        <segue reference="K6U-Bn-kIT"/>
+        <segue reference="4Ha-yX-psj"/>
+        <segue reference="NBx-wR-Q6e"/>
     </inferredMetricsTieBreakers>
 </document>

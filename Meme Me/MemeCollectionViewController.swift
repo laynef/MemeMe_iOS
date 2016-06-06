@@ -140,7 +140,6 @@ extension MemeCollectionViewController {
         return CollectionOfMemes.allMemes.count
     }
     
-    
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("CollectionViewCell", forIndexPath: indexPath) as! CollectionViewCell
         
@@ -149,7 +148,6 @@ extension MemeCollectionViewController {
         
         return cell
     }
-    
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
@@ -163,22 +161,18 @@ extension MemeCollectionViewController {
             
         } else {
             
-            
             let object: AnyObject = storyboard!.instantiateViewControllerWithIdentifier("DetailViewController")
             let detailVC = object as! DetailViewController
             
             detailVC.meme = CollectionOfMemes.allMemes[indexPath.item]
             navigationController!.pushViewController(detailVC, animated: true)
-            
         }
     }
     
     
     override func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: NSIndexPath) {
         
-        
         navigationItem.rightBarButtonItem?.enabled = (selectedMemes.count > 0)
-        
         
         if editingMode {
             
