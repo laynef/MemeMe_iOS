@@ -163,7 +163,6 @@
                                 </constraints>
                                 <connections>
                                     <outlet property="selectedImageView" destination="Spe-cj-YUo" id="Ap3-B9-6gq"/>
-                                    <segue destination="bhO-Qg-LjJ" kind="show" identifier="showDetailCollection" id="4Ha-yX-psj"/>
                                 </connections>
                             </collectionViewCell>
                         </cells>
@@ -271,7 +270,6 @@
                                 <connections>
                                     <outlet property="tableImage" destination="96d-Fl-1c0" id="fbE-YL-aF2"/>
                                     <outlet property="tableLabel" destination="8Oq-Hc-ezc" id="WlB-14-fOX"/>
-                                    <segue destination="bhO-Qg-LjJ" kind="show" identifier="showDetailTable" id="fr8-o8-te9"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -295,7 +293,6 @@
         <!--Tab Bar Controller-->
         <scene sceneID="YzE-ZL-cUT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9WR-lC-rBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="rUI-Yt-3d9" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" id="6Cp-XN-NBN">
@@ -307,6 +304,7 @@
                         <segue destination="P1E-Ek-1rU" kind="relationship" relationship="viewControllers" id="0HJ-Lq-gBp"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9WR-lC-rBW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-842" y="724"/>
         </scene>
@@ -315,7 +313,4 @@
         <image name="collection" width="30" height="30"/>
         <image name="table" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="4Ha-yX-psj"/>
-    </inferredMetricsTieBreakers>
 </document>
