@@ -9,26 +9,6 @@
 import Foundation
 import UIKit
 
-struct FontAttributes {
-    var fontSize: CGFloat = 40.0
-    var fontName = "HelveticaNeue-CondensedBlack"
-    var fontColor = UIColor.whiteColor()
-    var borderColor = UIColor.blackColor()
-    var strokeSize: CGFloat = -3.0
-}
-
-struct Meme {
-    var topText: String
-    var bottomText: String
-    var originalImage: UIImage
-    var memedImage: UIImage
-    var fontAttributes: FontAttributes
-}
-
-func ==(lhs: Meme, rhs: Meme) -> Bool {
-    return lhs.memedImage == rhs.memedImage
-}
-
 struct CollectionOfMemes {
     
     static func getMemeStorageInDelegate() -> AppDelegate {
@@ -69,4 +49,8 @@ struct CollectionOfMemes {
         return getMemeStorageInDelegate().savedMemes.count
     }
     
+}
+
+func ==(lhs: Meme, rhs: Meme) -> Bool {
+    return lhs.memedImage == rhs.memedImage
 }
