@@ -21,5 +21,21 @@ class DetailViewController: UIViewController {
             detailImageView.image = meme.memedImage
         }
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showMemeEditor" {
+            let editVC = segue.destinationViewController as! EditorViewController
+            editVC.editMeme = meme
+            editVC.userIsEditing = true
+        }
+        
+        if segue.identifier == "showDetailCollection" {
+            segue.destinationViewController as! MemeCollectionViewController
+        }
+        
+        if segue.identifier == "showDetailTables" {
+            segue.destinationViewController as! MemeTableViewController
+        }
+    }
 
 }

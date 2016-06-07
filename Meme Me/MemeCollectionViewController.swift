@@ -40,19 +40,16 @@ class MemeCollectionViewController: UICollectionViewController {
         navigationItem.leftBarButtonItem = editButton
         navigationItem.leftBarButtonItem?.enabled = CollectionOfMemes.allMemes.count > 0
         
-        
         for index in selectedMemes {
             collectionFrameLayout.deselectItemAtIndexPath(index, animated: true)
             let cell = collectionFrameLayout.cellForItemAtIndexPath(index) as! CollectionViewCell
             cell.isSelected(false)
         }
         
-        
         selectedMemes.removeAll()
         collectionFrameLayout.reloadData()
         
         editingMode = false
-        
         
         if CollectionOfMemes.allMemes.count == 0 {
             editButton.enabled = false
@@ -66,7 +63,6 @@ class MemeCollectionViewController: UICollectionViewController {
     func didTapEdit(sender: UIBarButtonItem?) {
         editingMode = !editingMode
         
-        
         if editingMode {
             
             editButton = UIBarButtonItem(barButtonSystemItem: .Done, target: self, action: #selector(MemeCollectionViewController.didTapEdit(_:)))
@@ -77,7 +73,6 @@ class MemeCollectionViewController: UICollectionViewController {
             navigationItem.rightBarButtonItem = addDeleteButton
             navigationItem.rightBarButtonItem?.enabled = false
         } else {
-            
             setDefaultUIState()
         }
     }
@@ -97,15 +92,12 @@ class MemeCollectionViewController: UICollectionViewController {
 
 extension MemeCollectionViewController {
     
-    
     func deleteSelectedMemes(sender: AnyObject) {
         if selectedMemes.count > 0 {
-            
             
             let sortedMemes = selectedMemes.sort {
                 return $0.item > $1.item
             }
-            
             
             for index in sortedMemes {
                 CollectionOfMemes.remove(atIndex: index.item)
@@ -135,7 +127,6 @@ extension MemeCollectionViewController {
 
 extension MemeCollectionViewController {
     
-    
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return CollectionOfMemes.allMemes.count
     }
@@ -150,7 +141,6 @@ extension MemeCollectionViewController {
     }
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        
         
         if editingMode {
             let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CollectionViewCell
