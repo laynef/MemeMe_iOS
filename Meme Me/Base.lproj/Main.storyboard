@@ -37,6 +37,9 @@
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kYX-u9-1GO">
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kYX-u9-1GO" secondAttribute="height" multiplier="150:11" id="KUP-aW-xAg"/>
+                                </constraints>
                                 <items>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="5gI-tu-K35"/>
                                     <barButtonItem systemItem="camera" id="xlu-eq-BdK">
@@ -57,6 +60,7 @@
                             <navigationBar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleAspectFit" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7UG-vA-CSy">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
                                 <constraints>
+                                    <constraint firstAttribute="width" secondItem="7UG-vA-CSy" secondAttribute="height" multiplier="150:11" id="ZXU-Vi-rqL"/>
                                     <constraint firstAttribute="width" secondItem="7UG-vA-CSy" secondAttribute="height" multiplier="150:11" id="ga3-7a-s4F"/>
                                 </constraints>
                                 <textAttributes key="titleTextAttributes">
@@ -87,6 +91,7 @@
                             <constraint firstItem="kYX-u9-1GO" firstAttribute="top" secondItem="EvA-sH-7Ld" secondAttribute="bottom" constant="20" id="LPS-Yy-wEc"/>
                             <constraint firstItem="7UG-vA-CSy" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="LQa-7F-kmA"/>
                             <constraint firstAttribute="trailing" secondItem="akj-bK-SNn" secondAttribute="trailing" constant="42" id="MHd-yQ-xKs"/>
+                            <constraint firstItem="EvA-sH-7Ld" firstAttribute="width" secondItem="kYX-u9-1GO" secondAttribute="height" multiplier="129:11" id="SVG-Wl-eBT"/>
                             <constraint firstItem="WBe-bh-jAj" firstAttribute="top" secondItem="7UG-vA-CSy" secondAttribute="bottom" constant="77" id="U3c-nu-7vB"/>
                             <constraint firstAttribute="trailing" secondItem="WBe-bh-jAj" secondAttribute="trailing" id="Yd7-se-oZU"/>
                             <constraint firstItem="WBe-bh-jAj" firstAttribute="top" secondItem="akj-bK-SNn" secondAttribute="bottom" constant="8" id="aYg-7i-iav"/>
@@ -100,7 +105,6 @@
                             <constraint firstItem="EvA-sH-7Ld" firstAttribute="top" secondItem="WBe-bh-jAj" secondAttribute="bottom" constant="8" id="siO-Vo-ICN"/>
                             <constraint firstItem="EvA-sH-7Ld" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="42" id="tGi-l7-uHg"/>
                             <constraint firstItem="kYX-u9-1GO" firstAttribute="width" secondItem="EvA-sH-7Ld" secondAttribute="height" multiplier="600:47" id="tMZ-sv-nXO"/>
-                            <constraint firstItem="kYX-u9-1GO" firstAttribute="top" secondItem="WBe-bh-jAj" secondAttribute="bottom" constant="75" id="ta0-eY-P3G"/>
                         </constraints>
                     </view>
                     <connections>
